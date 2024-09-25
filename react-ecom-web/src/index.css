@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    background: #ffff;
+}
+
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(to bottom, #8e2de2, #4a00e0);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.banner-image{
+    animation: imageSlider 1s ease;
+}
+
+@keyframes imageSlider {
+    from{
+        transform: translateX(100%) scale(0.3);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+
+.text-animation{
+    animation: textSlider 1s ease;
+}
+
+@keyframes textSlider {
+    from{
+        transform: translateX(-100%) scale(0.3);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
